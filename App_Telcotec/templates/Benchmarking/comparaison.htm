@@ -1,0 +1,55 @@
+
+function recupcsv($nomfichier) {
+    $array = array();
+    $recupfichier = fopen($nomfichier , "r");
+    if ($recupfichier) {
+     // On test la fin du fichier
+        while (!feof($recupfichier)) {
+            $data = fgetcsv($recupfichier , 0 , ';' , '"' ); // Recuperation des donnees du csv
+            if ( empty($data)) continue; // Donnee vide
+            //CONTINUE: structure de controle
+            $id=$data[3];
+            $array[$id]=$data; // On met les valeur dans le tableau
+        }
+        fclose($recupfichier);
+    } else {
+        throw new Exception("erreur de lecture du fichier $nomfichier"); // On lance une exception(fichier incorrecte)
+    }
+    return $array; // On conserve notre tableau
+
+}
+                                                    /*---------- LANCEMENT DU PROGRAMME ----------*/
+/*echo $var = (expression vérifiée) ? affiche valeur 1 si test vérifié : affiche valeur 2 si test non vérifié;
+ $mavar = ($test ? $vrai : $faux) SIGNIFIE if($test)$mavar = $vrai else $mavar =$faux
+
+if( isset($_REQUEST['f1']) ){
+    $nomfichier1 = $_REQUEST['f1'];
+} else {
+    $nomfichier1 = 'mourouj.csv';
+}
+
+if( isset($_REQUEST['f2']) ){
+    $nomfichier1 = $_REQUEST['f2'];
+} else {
+    $nomfichier1 = 'LAC1.csv';
+}
+*/
+
+
+$nomfichier1=isset($_REQUEST['f1'])?/*$_REQUEST['f1']*/:'LAC1.csv'; // On rentre le nom du premier fichier
+$nomfichier2=isset($_REQUEST['f2'])?/*$_REQUEST['f2']*/:'mourouj.csv';  // On rentre le nom du second fichier
+
+if ( !$nomfichier1 ) { die("Il me faut le premier fichier (f1)"); }// On verifie la presence du premier fichier
+if ( !$nomfichier2 ) { die("Il me faut le second fichier (f2)"); }// On verifie la presence du second fichier
+
+try {
+    $tabfichier1 = recupcsv($nomfichier1); // On lance la fonction cree precedement sur le premier fichier
+    $tabfichier2 = recupcsv($nomfichier2);
+
+} catch (Exception $e) {                 // On recupere les exception dans une variable e
+    die($e->getMessage());               // On demande d'afficher le message destinée au exception
+
+}
+
+print_r($tabfichier1);
+print_r($tabfichier2);

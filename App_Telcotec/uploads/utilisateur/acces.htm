@@ -1,0 +1,159 @@
+<script src="js/admin.js" language="javascript"></script>
+<link rel="stylesheet" href="css/access.css" type="text/css" />
+<div id="msg_erreur"></div>
+<script type="text/javascript">
+function verif_module(module,libelle) {
+	if (document.getElementById(libelle).checked == true)
+	check = '1';
+	else
+	check = '0';
+	$.post('ajax/module.php', {'param1':module,'param2':check}, function(data) {
+		console.log("response:["+data+"]");
+		res = data.split('_');
+		id = res[0];
+		tab = res[1];
+		num = res[2];
+		check = res[3];
+		
+		
+		opt = tab.split('-');
+		if (check == '1') {
+			for (i=0;i<num;i++) {
+				$('#'+opt[i]).slideDown(300);
+			}
+			$('input[type="checkbox"][rel="'+module+'"]').each(function() {
+				$(this).prop('checked', true);
+			});
+		} else {
+			for (i=0;i<num;i++) {
+				$('#'+opt[i]).slideUp(300)
+			}
+			$('input[type="checkbox"][rel="'+module+'"]').each(function() {
+				$(this).prop('checked', false);
+			});
+		}
+	});
+}
+</script>
+<style>
+ legend {
+ margin-top:15px;
+margin-left:290px;
+	line-height:40px;
+	font-size:32px;
+	color:black;;
+	font-weight: 900px;
+	margin-bottom: 15px;
+	
+}
+ #bt
+{
+margin-top:-20px;
+padding-left:340px;
+margin-bottom:30px;
+}
+.boutton1
+{
+cursor:default;
+margin-top:20px;
+margin-left:-20px;
+margin-bottom:-10px;
+background:url(images/role-user.png) no-repeat;
+background-position:3px 0px;
+width:110px;
+height:30px;
+padding-left:35px;
+font-size:1.1em;
+border:solid 2px black;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+-o-border-radius:5px;
+border-radius:5px;
+text-center:right;
+}
+.boutton2
+{
+cursor:default;
+margin-top:20px;
+margin-left:10px;
+margin-bottom:-10px;
+background:url(images/annuler1.png) no-repeat;
+background-position:3px 0px;
+width:110px;
+height:30px;
+padding-left:40px;
+font-size:1.1em;
+border:solid 2px black;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+-o-border-radius:5px;
+border-radius:5px;
+text-center:right;
+}
+</style>
+<form name="admin" method="POST" action="?cmd=utilisateur&action=saveacces&go=<?php echo $id; ?>" enctype="multipart/form-data" >
+<legend>Lists of access rights</legend>
+<div id="vtable11">
+        <table width="95%" border="0" align="center" cellpadding="0" cellspacing="1">
+       
+         <?php 
+         $req = mysql_query("select * from module where id_module IS NULL order by ordre");
+         while ($res = mysql_fetch_array($req))
+         {
+         $libelle = utf8_encode($res['Libelle']);
+         $ver = mysql_query("select * from acces_module where Id_user = '".$id."' and Id_module = '".$res[0]."' and Type = '1'");
+         $nb_m = mysql_num_rows($ver);
+         if ($nb_m > 0)
+         {
+         $display_opt = '';
+         $option = 'checked';
+         }
+         else
+         {
+          $display_opt = 'none';
+         $option = '';
+         }
+         ?>
+        <tr>
+          <th width="20px"><input type="checkbox" name="<?php echo $res[0]; ?>" id="<?php echo $libelle; ?>" value="<?php echo $res[0]; ?>" onclick="verif_module('<?php echo $res[0]; ?>','<?php echo $libelle; ?>');" <?php echo $option; ?> rel=""/>
+</th>
+       <th><label>
+             <?php echo $libelle; ?>&nbsp;&nbsp;        
+          </label></th>
+         
+        </tr>
+        
+      
+        <?php
+        
+        $req_s = mysql_query("select * from module where id_module = '".$res[0]."' order by ordre");
+       while ($res_s = mysql_fetch_array($req_s))
+	{
+    $sousm = mysql_query("select * from acces_module where Id_user = '".$id."' and id_module = '".$res_s[0]."' and Type = '2'");
+         $nb_s = mysql_num_rows($sousm);
+         if ($nb_s > 0)
+         {
+        
+         $options = 'checked';
+         }
+         else
+         {
+          
+         $options = '';
+         }
+		echo "<tr style='display:".$display_opt."' id = '".$res_s[0]."'><td width='20px'><input type='checkbox' name='sous".$res_s[0]."' value='".$res_s[0]."' ".$options." rel='".$res_s['id_module']."' /></td><td>".utf8_encode($res_s['Libelle'])."</td></tr>";
+	}
+        }
+        ?>
+      
+        
+        
+      </table><br /><br /></div>
+	  	  <div id="bt">  
+<input name="button2" type="submit" class="boutton1" id="button2" value="Validate" />&nbsp;<input name="button2" type="button" class="boutton2" id="button2" value="Cancel" style="width:100px" onclick="window.parent.location.href='?cmd=utilisateur&action=list'" /> </div>  
+	  </form>
+	<script src="js/TweenMax.js"></script>
+<script src="js/TweenLite.js"></script>
+<script src="js/TimelineMax.js"></script>
+<script src="js/TimelineLite.js"></script>
+<script src="js/access.js"></script>

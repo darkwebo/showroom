@@ -1,0 +1,62 @@
+<link rel="stylesheet" href="param.css" type="text/css" />
+
+
+<style>
+#param
+{
+display:none;
+padding:24px;
+margin:0 auto;
+margin-left:-90px;
+border:solid 2px #46394A;
+	
+	-webkit-borde-radius:5px 5px 5px 5px ;
+	-moz-border-radius:5px 5px 5px 5px ;
+	-o-border-radius:5px 5px 5px 5px ;
+	border-radius:5px 5px 5px 5px ;
+	-webkitbox-shadow:5px 5px 5px 5px
+padding-right:0;
+width:300px;
+
+}
+#param legend{
+font-size:1.2em;
+font-weight:700;
+margin-left:100px;
+}
+
+
+</style>
+
+    
+  
+<div id="param">
+	<legend> KPI RxLev1 Scale</legend><hr>
+		
+		<ul>
+		<strong>good signal</strong>
+	    <li>
+			
+            <label for="sirgoodfrom">From : </label>
+            <input type="text" id="sirgoodfrom" name="data[Good][from]" value="-85"  width="20px"/>
+            <label for="sirgoodto">To :</label>			 
+            <input type="text" id="sirgoodto" name="data[Good][to]" value="-30" width="20px"/>
+        </li> 
+      <strong>Average signal</strong>		
+        <li>
+			
+            <label for="fair">From : </label>
+            <input type="text" name="data[Fair][from]" value="-95"  width="20px"/>
+            <label for="fair">To :</label>			 
+            <input type="text" name="data[Fair][to]" value="-85" width="20px"/>
+        </li>  
+      <strong>Bad signal</strong>		
+        <li>
+			
+            <label for="poor">From : </label>
+            <input type="text" name="data[Poor][from]" value="-120"  width="20px"/>
+            <label for="poor">To : </label>			 
+            <input type="text" name="data[Poor][to]" value="-30" width="20px"/>
+        </li>		
+        </ul>
+	</div>

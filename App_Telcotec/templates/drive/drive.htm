@@ -1,0 +1,408 @@
+<link rel="stylesheet" href="css/drive.css" type="text/css" />
+<link rel="stylesheet" href="css/nav-mono.css" type="text/css" />
+<link rel="stylesheet" href="css/map.css" type="text/css" />
+<script src="js/TweenMax.js"></script>
+<script src="js/TweenLite.js"></script>
+<script src="js/TimelineMax.js"></script>
+<script src="js/TimelineLite.js"></script>
+<script src="param.js" type="text/javascript"></script>
+ <script src="js/nav4.js"></script>
+ 
+ 
+ 
+
+
+
+
+
+<div id="demo"></div>
+
+
+<div class="bloc">
+		<div class="title">
+		  <p>Measurement analysis Drive Test</p>
+			<div class="tabs" id="tabs1">
+				<!--<a href="?cmd=mapping"> Mapping</a>-->
+				<a href="?cmd=drive"> Monotoring</a>
+				
+			</div>
+			
+		</div>
+      <div class="content">
+	  	<div id="contenu1">
+		<style>
+ol{
+  list-style-type: none;
+  }
+  
+
+fieldset {
+	border: 0;
+	margin-bottom: 20px;
+	margin-top:30px;
+	padding-left:189px;
+}
+
+
+fieldset ol li>label
+{
+float:left;
+padding-right: 20px;
+width: 110px;
+text-align: right;
+margin-top:4px;
+
+}
+fieldset ol li {
+-moz-border-radius:10px;
+-webkit-border-radius:10px;
+-o-border-radius:10px;
+border-radius:10px;
+border:solid 2px black;
+background-color:#F7F7F7;
+padding:10px;
+padding-left:40px;
+margin-bottom:5px;
+width:60px;
+	
+}
+input[type="text"] 
+{
+width:50px;
+height:20px;
+}
+ 
+input[type="submit"] ,input[type="button"], {
+color:black;
+
+width:100px;
+background-color:rgba(255,255,255,0.7)
+
+	
+
+margin-left: 200px;
+
+font-size: 16px;
+font-family:"Time New Roman", Times,serif; 
+}
+ #bt
+{
+padding-top:4px;
+padding-left:420px;
+padding-bottom:20px;
+}
+#chartContainerBar ,#chartContainerPie
+{
+margin-right:600px;
+border:solid 2px orange;
+display:none;
+margin-bottom:20px;
+
+}
+.map
+{
+cursor:default;
+margin-top:10px;
+margin-left:38px;
+margin-bottom:18px;
+background:url(images/icon1.png) no-repeat;
+background-position:3px 0px;
+width:110px;
+height:30px;
+padding-left:40px;
+font-size:1.1em;
+border:solid 2px black;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+-o-border-radius:5px;
+border-radius:5px;
+text-center:right;
+}
+
+.trajet
+{
+cursor:default;
+margin-top:20px;
+margin-left:70px;
+margin-bottom:-10px;
+background:url(images/route.png) no-repeat;
+background-position:3px 0px;
+width:110px;
+height:30px;
+padding-left:40px;
+font-size:1.1em;
+border:solid 2px black;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+-o-border-radius:5px;
+border-radius:5px;
+text-center:right;
+}
+
+#legend-map
+{
+display:none;
+margin-left:-250px;
+margin-right:70px;
+margin-bottom:20px;
+border:solid 2px black;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+-o-border-radius:5px;
+}
+</style>
+		
+		
+		
+		
+		
+         <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false">
+    </script>
+	<script src="js/map.js"></script>
+	
+    <script >
+    
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+	
+   <!--   <form  enctype="multiple/form-data" name="fichier1" method="POST" action="" >
+     <fieldset>
+        <ol>
+		  	<li>
+             <label for="file">File name :</label>
+             <select name="file" style="width:210px">
+            <?php echo $nom; ?>
+            </select>
+         
+          </li>	
+		   <li>
+             <label for="drive">Analysis :</label>
+             <input type="radio" name="drive" value="road" checked="checked" /> road
+             <input type="radio" name="drive" value="Coverage Evaluation"/> Coverage Evaluation
+        </li>
+       </ol>
+	   
+	 
+	   <fieldset>
+	   <?php include('param.htm'); ?>
+	    <input type="button" value="Mapping" class="map"  id="map" >
+<div id="legend-map">	 
+	 <table width="100%" border="0" align="center"  >
+ <tr>
+ <td><img src="images/bullet-verte.png"></td> <td >Good signal level</td>
+ <td><img src="images/bulle-jaune.png"></td><td>Average signal level</td>
+ <td><img src="images/bullet-rouge.png"></td><td>Bad signal level</td>
+ <td><img src="images/bullet-violet.png"></td> <td> Undefined signal level</td>
+ 
+ 
+ </tr>
+ 
+ </table>
+ </div>
+     </form>
+	 
+
+    <div id="map-canvas"></div>	 -->
+		</div>
+	  <div id="contenu2">
+			
+			<style>
+			
+		
+
+
+ol{
+  list-style-type: none;
+  }
+  ul{
+  list-style-type: none;
+  }
+
+fieldset {
+	border: 0;
+	margin-bottom: 20px;
+	margin-top:30px;
+	padding-left:169px;
+}
+
+
+fieldset ol li>label
+{
+float:left;
+padding-right: 10px;
+width: 110px;
+text-align: right;
+margin-top:4px;
+
+}
+fieldset ol li {
+-moz-border-radius:10px;
+-webkit-border-radius:10px;
+-o-border-radius:10px;
+border-radius:10px;
+border:solid 2px black;
+background-color:#F7F7F7;
+
+padding-right:30px;
+margin-bottom:5px;
+width: 360px;
+	
+}
+input[type="text"] 
+{
+width:50px;
+height:20px;
+}
+ 
+input[type="submit"] ,input[type="button"], {
+color:black;
+
+width:100px;
+background-color:rgba(255,255,255,0.7)
+
+	
+
+margin-left: 200px;
+
+font-size: 16px;
+font-family:"Time New Roman", Times,serif; 
+}
+ .bouton
+{
+
+cursor:default;
+margin-top:-15px;
+margin-left:-35px;
+margin-bottom:7px;
+background:url(images/stat.png) no-repeat;
+background-position:3px 0px;
+width:110px;
+height:31px;
+padding-left:40px;
+font-size:1.1em;
+border:solid 2px black;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+-o-border-radius:5px;
+border-radius:5px;
+text-center:right;
+
+}
+#chartContainerBar ,#chartContainerPie,#chartContainerMulti
+{
+margin-left:27px;
+border:solid 2px orange;
+display:none;
+margin-bottom:20px;
+
+}
+<!--#ali.list {
+
+background-color:#F7F7F7;
+border:solid 2px black;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+-o-border-radius:5px;
+border-radius:5px;
+padding:10px;
+
+	margin-bottom: 40px;
+	margin-top:10px;
+	margin-left:235px;
+	width: 399px;
+	height:150px;
+	
+overflow:auto;
+display:none;
+
+}-->
+
+
+</style>
+
+<script src="js/knockout-3.0.0.js"></script>
+<script src="js/globalize.min.js"></script>
+<script src="js/dx.chartjs.js"></script>
+<script src="js/drive.js" type="text/javascript"></script>
+
+<div id="ali">
+<form  enctype="multiple/form-data" name="fichier" method="POST" action="" >
+
+  <fieldset>
+     
+       <ol>
+		   <li>
+				 <label for="analyse">Analysis type :</label>
+				 <input type="radio" name="type-analyse" value="Single-file" checked="checked" /> Single-file
+				 <input type="radio" name="type-analyse" value="Multi-file"/> Multi-file
+			</li>
+		</ol>
+	      <ul>
+			<span><li>
+            <?php echo $list; ?>
+            			
+			</li></span>
+		   </ul>
+		<ol>	
+		  	<span><li>
+             <label for="file">File name :</label>
+             <select name="file" style="width:200px">
+            <?php echo $nom; ?>
+            </select>
+         
+          </li></span>
+		  
+		  <li>
+             <label for="kpi">KPI name :</label>
+             <select name="kpi" style="width:200px" >
+            <?php echo $kd; ?>
+            </select>
+         
+          </li>	  
+	    <li>
+             <label for="drive">Scale :</label>
+             <input type="radio" name="drive" value="default" checked="checked" /> Default Scale
+             <input type="radio" name="drive" value="new"/> new scale
+        </li>
+		
+		
+		<li>
+             <label for="chart">Chart type :</label>
+             <input type="radio" name="chart" value="bar"  checked="checked" /> Bar_chart
+             <input type="radio" name="chart" value="pie"/> Pie_chart
+			 
+           
+        </li>  	
+         </ol>
+		  
+      </fieldset> 
+	   <?php include('calibre.htm'); ?>
+	<div id="bt">  
+<input name="button1" type="button" class="bouton" id="button" value="Statistic" /> </div>
+	  </form>
+	</div>  
+	<script src="js/drive-anim.js" type="text/javascript"></script>
+	<script src="js/js1/highcharts.js"></script>
+<script src="js/js1/modules/exporting.js"></script>
+<script src="js/drive1.js" type="text/javascript"></script>
+
+<div id="chartContainerBar" style="width: 810px; height: 500px; "></div>
+<div id="chartContainerPie" style="width: 810px; height: 500px;"></div>
+<div id="chartContainerMulti" style="width: 810px; height: 500px;"></div>
+
+
+
+
+		 
+		</div>
+
+		
+         
+	</div>
+
+  </div>
+  
+
+
+	

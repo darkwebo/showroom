@@ -1,0 +1,132 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<link rel="stylesheet" href="css/connexion.css" type="text/css" />
+<script src="js/jquery-1.10.2.min.js"></script>
+<script src="js/jquery-migrate-1.2.1.min.js"></script>
+<script type="text/javascript">
+$(function() {
+	$('form[name="forme1"]').find('input[name="username"]').focus();
+	$('form[name="forme1"]').submit(function() {
+		var username = $(this).find('input[name="username"]').val();
+		var password = $(this).find('input[name="password"]').val();
+		
+		if(username.length>0 && password.length>0) {
+			$.post("login.php", {"username" : username, "password" : password}, function(data) {
+				console.log(data);
+				data = eval("("+data+")");
+				console.log(data.success);
+				if(data.success == true) {
+					window.location.href = "index.php";
+				} else {
+					if(data.errors.length>0) {
+						alert(data.errors[0].msg);
+					}
+				}
+				
+			});
+		} else {
+			alert('Please check your input parameters');
+		}
+		return false;
+	});
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+$(".center1").animate({
+		opacity:100.0,
+		left: '+=2000',
+		height:'toggle'
+		},7000, function(){
+		
+});
+
+
+
+});
+
+
+</script>
+</head>
+
+<body>
+<div id="demo">
+ 
+  <div id="logo"><p>Welcome to Use</p></div> 
+   <div id="bar"></div>
+</div>
+<br>
+
+  <div id="skew"><img src="images/logo13.png"></div>
+
+
+<div class="para"><p>WEB Management Interface for QoS Smart Tool</p></div>
+<div class="center1">
+   <div id="a1"><img src="images/login3.png"></div>
+   
+   <div id="a2"><h2>Authentification</h2></div>
+	<hr/>
+	<form name="forme1" id="loginForm" action="login.php" method="post">
+		<ol>
+		<li>
+             <label for="username">Username:</label>
+              <input type="text" name="username" id="username" value="" size="20" tabindex="1"/>
+        </li>
+		<li>
+            <label>Password:</label>
+              <input type="password" name="password" id="password" value="" size="20" tabindex="2"/>
+        </li>
+		</ol>
+		
+		
+		
+		<p class="submit">
+			<input type="submit" name="mpsubmit" id="mpsubmit" value="Connect" tabindex="3"/>
+		</p>
+	</form>
+</div>
+
+<div class="foot1"> 
+<p>All contents copyright &copy; QoS Smart Tools. All rights reserved.</p>
+</div>
+
+<script src="js/TweenMax.js"></script>
+<script src="js/TweenLite.js"></script>
+<script src="js/TimelineMax.js"></script>
+<script src="js/TimelineLite.js"></script>
+<script src="js/login.js"></script>
+
+<script type="text/javascript">
+(function($){
+
+
+//just a basic example of some TweenMax features
+
+TweenMax.from(" #a2 h2", .6, {opacity:0, repeat:1000000, yoyo:true})
+
+/*
+staggerFrom() docs: http://api.greensock.com/js/com/greensock/TweenMax.html#staggerFrom()
+*/
+
+//targets, duration, vars, stagger
+TweenMax.staggerFrom("fieldset ol li", 2, {top:"+=100px", opacity:0, delay:2, ease:Back.easeOut}, 0.1);
+
+TweenMax.staggerFrom("#bt", 7,{top:"+=100px", opacity:0, delay:2, ease:Back.easeOut}, 0.1);
+
+
+$(".foot1 p").show();
+
+})(jQuery);
+
+
+
+
+
+
+
+</script>
+</body>
+</html>

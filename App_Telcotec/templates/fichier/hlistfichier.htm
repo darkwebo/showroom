@@ -1,0 +1,131 @@
+<script type="text/javascript">
+$(function() {
+	$('select[name="country"]').change(function() {
+		window.location.href = '?cmd=fichier&affichage='+$(this).val()+'&p=1';
+	});
+});
+
+</script>
+<style>
+@font-face{
+	font-family:note1;
+	src:url(css/fonts/note_this.ttf);
+}
+.entete p{
+	font-family: note1;
+	font-size: 1.6em;
+
+}
+#global
+{
+position:relative;
+}
+
+ #list ul li {
+ position:absolute;
+ top:-60px;
+margin-left:587px;
+border:solid 2px black;
+-moz-border-radius:10px;
+-webkit-border-radius:10px;
+-o-border-radius:10px;
+border-radius:10px;
+background-color:#F7F7F7;
+padding:10px;
+padding-left:85px;
+padding-right:10px;
+margin-bottom:5px;
+width: 241px;
+}
+#list ul li img{
+position:absolute;
+top:2px;
+left:27px;
+
+}
+#list ul span{
+position:absolute;
+top:-48px;
+left:518px;
+
+}
+</style>
+<div id="global">
+<!-- '+this.option[this.selectedIndex].value-->
+<div id="list">
+<form action='' method='get'>
+<ul>
+<span><select name="list2" style="width:54px" onchange="window.location='index.php?cmd=fichier&affichage=<?php echo $affichage;?>&p='+this.options[this.selectedIndex].value">
+<option>
+<?php echo $nombre_page?>
+</option>
+</select></span>
+<li><img src="images/recherche.png"/>
+            		 <select name="country" style="width:234px">
+				<?php echo $file; ?>
+				<OPTION>ALL files</OPTION>
+				<OPTION>Afrique du Sud</OPTION>
+			    <OPTION>Algerie</OPTION>
+				<OPTION>Angola</OPTION>
+				<OPTION>Benin</OPTION>
+				<OPTION>Botswana</OPTION>
+				<OPTION>Burkina Faso</OPTION>
+				<OPTION>Burundi</OPTION>
+				<OPTION>Cameroun</OPTION>
+				<OPTION>Congo</OPTION>
+				<OPTION>Cote d Ivoire</OPTION>
+				<OPTION>Djibouti</OPTION>
+				<OPTION>Egypte</OPTION>
+				<OPTION>Erythree</OPTION>
+				<OPTION>Ethiopie</OPTION>
+				<OPTION>Gabon</OPTION>
+				<OPTION>Gambie</OPTION>
+				<OPTION>Ghana</OPTION>
+				<OPTION>Guinee</OPTION>
+				<OPTION>Guinee Bissau</OPTION>
+				<OPTION>Guinee Equatoriale</OPTION>
+				<OPTION>Kenya</OPTION>
+				<OPTION>Lesotho</OPTION>
+				<OPTION>Liberia</OPTION>
+				<OPTION>Libye</OPTION>
+				<OPTION>Malawi</OPTION>
+				<OPTION>Mali</OPTION>
+				<OPTION>Maroc</OPTION>
+				<OPTION>Mauritanie</OPTION>
+				<OPTION>Mozambique</OPTION>
+				<OPTION>Namibie</OPTION>
+				<OPTION>Niger</OPTION>
+				<OPTION>Nigeria</OPTION>
+				<OPTION>Ouganda</OPTION>
+				<OPTION>Republique Democratique du Congo</OPTION>
+				<OPTION>Rwanda</OPTION>
+				<OPTION>Senegal</OPTION>
+				<OPTION>Sierra Leone</OPTION>
+				<OPTION>Somalie</OPTION>
+				<OPTION>Soudan</OPTION>
+				<OPTION>Swaziland</OPTION>
+				<OPTION>Tanzanie</OPTION>
+				<OPTION>Tchad</OPTION>
+				<OPTION>Togo</OPTION>
+				<OPTION>Tunisie</OPTION>
+				<OPTION>Zambie</OPTION>
+				<OPTION>Zimbabwe</OPTION>
+
+            </select>
+
+
+          </li></ul></form></div></div>
+<div id="htable">
+<table width="100%" border="0" align="center" cellpadding="0" cellspacing="1">
+<tr>
+	<td class="block" align="center" colspan="5"><span style="font-size:1.2em ">Lists of File</span></td>
+	<td class="block" align="center" colspan="3"><a href="?cmd=fichier&action=add" style="font-size:1.2em">Add File</a></td>
+</tr>
+<tr>
+<th>File_Name</th>
+<th>Country_Name</th>
+<th>Insertion_Date</th>
+<th>File_Format</th>
+<th>File_Type</th>
+<th colspan="3" width="100px">Actions</th>
+</tr>

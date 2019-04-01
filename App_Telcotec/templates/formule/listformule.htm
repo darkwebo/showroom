@@ -1,0 +1,10 @@
+<tr>
+	<input type="hidden" id="formule<?php echo $dbf1['id']; ?>" value="<?php echo $dbf1['formule']; ?>"/>
+	<td><?php echo $dbf1['name']; ?></td>
+	<td><?php echo $dbf1['operator']; ?></td>
+	<td align="center"><a href="" rel="mybox" alt="formule<?php echo $dbf1['id']; ?>"><img src="images/icones_actions/a2.png" alt="Show Formula" border="0" title="Show Formula"/></a></td>
+	<td align="center"><a href="?cmd=formule&action=cal&id=<?php echo $dbf1[0]; ?>"><img src="images/icones_actions/calculator_edit.png" alt="Calculate" border="0" title="Calculate"/></a></td>
+	<td align="center"><a href="?cmd=formule&action=mod&id=<?php echo $dbf1[0]; ?>"><img src="images/icones_actions/edit.png" alt="Edit" border="0" title="Edit"/></a></td>
+	<td align="center"><a href="?cmd=formule&action=del&id=<?php echo $dbf1[0]; ?>"><img src="images/icones_actions/delete.png" alt="Delete" title="Delete" border="0" /></a></td>
+	
+	</tr>

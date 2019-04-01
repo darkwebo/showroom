@@ -1,0 +1,47 @@
+<?php
+$cmd = isset($_GET['cmd']) ? $_GET['cmd'] : "";
+$action = isset($_GET['action']) ? $_GET['action'] : "";
+?>
+
+
+<li class="left">&nbsp;</li>
+			<li><a class="<?php if ($cmd == 'acceuil' || $cmd == '') {echo 'active';}?>" href="?cmd=acceuil" title="Home page">Home</a></li>
+			<li><a class="<?php if ($cmd == 'Benchmarking' || $cmd == '') {echo 'active';}?>" href="?cmd=Benchmarking" title="Benchmarking page">Benchmarking</a></li>
+
+
+<?php
+$req = mysql_query("select * from acces_module am, module m where Id_user = '".$_SESSION['id']."' and Type = '1' and m.Id = am.Id_module  order by ordre");
+
+while ($res = mysql_fetch_array($req)) {
+$libelle = utf8_encode($res['Libelle']);
+$lien = strlen($res['Lien']) ? $res['Lien'] : '#';
+$cm = $res['cmd'];
+
+$requete = mysql_query("select * from module where Id_module = '".$res['Id_module']."' and Id in (select Id_module from acces_module where Id_user = '".$_SESSION['id']."' and Type = '2' ) order by ordre");
+?>
+			<li>
+				<a class="<?php if ($cmd == $cm) {echo "active";}?>" href="<?php echo $lien; ?>"><?php echo $libelle; ?> <?php echo mysql_num_rows($requete)>0 ? '<img src="images/nav_bullet.jpg" alt="" />' : ''; ?></a>
+
+<?php
+if(mysql_num_rows($requete)>0) {
+?>
+			<!-- submenu -->
+				<ul >
+<?php
+while ($resultat = mysql_fetch_array($requete)) {
+$lien_sous = $resultat['Lien'];
+$libelle_sous = utf8_encode($resultat['Libelle']);
+?>
+<li  class="   level1"> <a href="<?php echo $lien_sous; ?>"   class=""><span><?php echo $libelle_sous; ?></span></a>                    </li>
+<?php
+}
+?>
+         </ul>
+<?php } ?>
+</li>
+
+<?php
+}
+?>
+				<li class="sep">&nbsp;</li>
+				<li class="right">&nbsp;</li>

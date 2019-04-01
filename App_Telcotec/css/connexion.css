@@ -1,0 +1,200 @@
+
+h2 {
+	font-size : 18px;
+	margin-bottom: 8px;
+}
+#aut {
+	border: 3px solid white;
+	width:400px;
+	height:450px;
+	/*margin:140px auto 0 auto;*/
+	padding:20px;
+}
+hr {
+	height: 2px;
+	background-color: #ffffff;
+	background-position: right;
+	background-repeat: no-repeat;
+	margin: 4px 0;
+}
+p {
+  margin: 10px 6px 15px 6px;
+  line-height: 1.5em;
+  text-align: left;
+}
+p.submit{
+margin-top:14px;
+}
+p input {
+	float: right;
+}
+p::before {
+	clear: both;
+}
+p::after {
+	clear: both;
+}
+label {
+	color:blue;
+	font-size:14px;
+}
+input {
+	color: #000;
+	font-size: 14px;
+	margin:10px 8px 4px 8px;
+	padding: 4px 8px;
+}
+input[type="text"], input[type="password"] {
+	width: 240px;
+	border: 1px solid #777;
+}
+input[type="submit"], input[type="button"] {
+	padding: 4px 12px;
+}
+
+
+
+body{
+	background:url(../images/bg_repeat.jpg) repeat 0 0;
+}
+
+#bar{
+	background-color:white; 
+	color:white; 
+	position:relative; 
+	width:0; 
+	height:4px;
+	}
+#logo {
+	position: relative;
+	left:-200px;
+	width: 200px;;
+	height: 30px;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: 20px;
+
+}
+img{
+margin-left:90px;
+margin-top:7px;
+}
+
+p{
+font-family:Arial, Helvetica, sans-serif;
+font-size: 15px;
+color:white;
+}
+.para p{
+margin-left:471px;
+margin-top:25px;
+font-family:Arial, Helvetica, sans-serif;
+font-size: 18px;
+color:white;
+}
+.foot1 p{
+
+font-family:Arial, Helvetica, sans-serif;
+font-size: 16px;
+color:white;
+display:none;
+}
+.center1
+{
+height:300px;
+width:400px;
+padding:10px;
+margin-left:auto;
+margin-right:auto;
+margin-bottom:100px;
+border:solid 3px orange;
+-webkit-border-radius:15px 15px 0 0 ;
+	-moz-border-radius:15px 15px 0 0 ;
+	-o-border-radius:15px 15px 0 0 ;
+	border-radius:15px 15px 0 0 ;
+/*-webkit-border-radius:10px;
+border-radius:10px;*/
+background:#f4f4f4f4;
+display:none;
+filter:alpha(opacity=0);
+-webkit-opacity:0.0;
+opacity:0.0;
+left:-2000px;
+
+}
+span
+{
+display:inline-block;
+}
+.foot1{
+width:500px;
+margin-left:410px;
+margin-bottom:-40px;
+}
+
+
+
+
+/*style de  la partie login   */
+
+
+.center1 h2 {
+ color:orange;
+	font-size : 25px;
+	margin-bottom: 35px;
+	margin-left:164px;
+	text-align:center;
+	margin-top:-69px;
+	
+}
+.center1 {
+	border: 3px solid white;
+	width:450px;
+	height:225px;
+	margin:0 auto 197px auto;
+	padding:20px;
+}
+hr {
+	height: 2px;
+	background-color: #ffffff;
+	background-position: right;
+	background-repeat: no-repeat;
+	margin: 4px 0;
+}
+.center1 p {
+  margin: 10px 6px 15px 6px;
+  line-height: 1.5em;
+  text-align: left;
+}
+.center1 p.submit{
+margin-top:14px;
+}
+ 
+
+ label {
+	color:orange;
+	font-size:1.2em;
+
+	
+	
+	
+}
+ 
+ input[type="submit"], input[type="button"] {
+	padding: 4px 12px;
+	margin-right:53px;
+	font-weight:600;
+}
+
+
+
+
+ol{
+  list-style-type: none;
+  }
+
+#a1 {
+margin-left:-50px;
+margin-top:-30px;
+
+}
+

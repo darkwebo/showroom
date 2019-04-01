@@ -1,0 +1,347 @@
+<style>
+.div_kpi{
+	display:none;
+		}
+
+#sir,#bler,#power,#rscp,#ecio,#Rxlev,#Rxqual
+{
+padding :20px;
+padding-top:0;
+width:380px;
+padding-bottom:5px;
+margin:0 auto;
+
+border:solid 3px #46394A;
+	margin-bottom:35px;
+	margin-left:221px;
+	-webkit-borde-radius:15px 15px 15px 15px ;
+	-moz-border-radius:15px 15px 15px 15px ;
+	-o-border-radius:15px 15px 15px 15px ;
+	border-radius:15px 15px 15px 15px ;
+	-moz-box-shadow:7px 7px 7px gray;
+
+
+}
+em{
+font-size:1.1em;
+font-weight: 600;
+}
+ li {
+padding-left:50px;
+	}
+</style>
+
+<div class="div_kpi div_SIR">
+  
+
+	<div id="sir">
+	<h3 style=" text-align:center"> KPI SIR Scale</h3><hr>
+		<ol>
+		<strong>Good</strong>
+	    <li>
+		
+            <label for="sirgoodfrom">From : </label>
+            <input type="text" id="sirgoodfrom" name="data[SIR][Good][from]" value="15"  width="20px"/>
+            <label for="sirgoodto">To :</label>			 
+            <input type="text" id="sirgoodto" name="data[SIR][Good][to]" value="20" width="20px"/>
+        </li> 
+      <strong>Fair</strong>		
+        <li>
+			
+            <label for="fair">From : </label>
+            <input type="text" name="data[SIR][Fair][from]" value="10"  width="20px"/>
+            <label for="fair">To :</label>			 
+            <input type="text" name="data[SIR][Fair][to]" value="15" width="20px"/>
+        </li>  
+      <strong>Poor</strong>		
+        <li>
+			
+            <label for="poor">From : </label>
+            <input type="text" name="data[SIR][Poor][from]" value="5"  width="20px"/>
+            <label for="poor">To : </label>			 
+            <input type="text" name="data[SIR][Poor][to]" value="10" width="20px"/>
+        </li>		
+        </ol>
+	</div>	
+   
+</div>
+
+	  
+	  
+	  
+ <div class="div_kpi div_BLER">
+  
+
+	<div id="bler">
+	   <h3 style=" text-align:center"> KPI BLER(W) Scale</h3><hr>
+     
+       <ol>
+	   <strong>Excelent</strong>
+	    <li>
+             <label for="excelent">From : </label>
+             <input type="text" name="data[BLER][Excelent][from]" value="0"  width="20px"/>
+              <label for="excelent">To : </label>			 
+             <input type="text" name="data[BLER][Excelent][to]" value="5" width="20px"/>
+           
+        </li>  
+        <strong>Good</strong>
+        <li>
+             <label for="good">From : </label>
+             <input type="text" name="data[BLER][Good][from]" value="5"  width="20px"/>
+              <label for="good">To : </label>			 
+             <input type="text" name="data[BLER][Good][to]" value="10" width="20px"/>
+           
+        </li>  
+        <strong>Average</strong>
+        <li>
+             <label for="average">From :</label>
+             <input type="text" name="data[BLER][Average][from]" value="10"  width="20px"/>
+              <label for="average">To </label>			 
+             <input type="text" name="data[BLER][Average][to]" value="30" width="20px"/>
+           
+        </li>  
+			<strong>Bad</strong>
+         <li>
+             <label for="bad">From : </label>
+             <input type="text" name="data[BLER][Bad][from]" value="30"  width="20px"/>
+              <label for="bad">To : </label>			 
+             <input type="text" name="data[BLER][Bad][to]" value="50" width="20px"/>
+           
+        </li>  
+		<strong>Very Bad</strong>
+        <li>
+             <label for="verybad">From : </label>
+             <input type="text" name="data[BLER][VeryBad][from]"  value="50"  width="20px"/>
+              <label for="verybad">To : </label>			 
+             <input type="text" name="data[BLER][VeryBad][to]"  value="100" width="20px"/>
+           
+        </li>  			
+		
+         </ol>
+     
+	</div>	
+   
+</div>
+	
+	
+	
+	
+	
+<div class="div_kpi div_RSCP">
+  
+
+	<div id="rscp">
+	   <h3 style=" text-align:center"> KPI Best RSCP(W) Scale</h3><hr>
+	
+       <ol>
+			<strong>Good</strong>
+	    <li>
+             <label for="good">From : </label>
+             <input type="text" name="data[Best RSCP][Good][from]" value="-85"  width="20px"/>
+              <label for="good">To : </label>			 
+             <input type="text" name="data[Best RSCP][Good][to]" value="-30" width="20px"/>
+        </li> 
+			<strong>Fair</strong>		
+        <li>
+             <label for="fair">From : </label>
+             <input type="text" name="data[Best RSCP][Fair][from]" value="-95"  width="20px"/>
+              <label for="fair">To : </label>			 
+             <input type="text" name="data[Best RSCP][Fair][to]" value="-85" width="20px"/>
+        </li> 
+			<strong>Poor</strong>		
+        <li>
+            <label for="poor">From : </label>
+            <input type="text" name="data[Best RSCP][Poor][from]" value="-120"  width="20px"/>
+            <label for="poor">To : </label>			 
+            <input type="text" name="data[Best RSCP][Poor][to]" value="-30" width="20px"/>       
+        </li>
+    </ol>
+	
+  </div>	
+   
+</div>
+	  
+
+	  
+	  
+	  
+	  
+<div class="div_kpi div_Power">
+  
+
+	<div id="power">
+	   <h3 style=" text-align:center"> KPI Rx Power(W) Scale</h3><hr>
+  
+       <ol>
+	   <strong>Good Coverage</strong>
+	    <li>
+             <label for="good">From : </label>
+             <input type="text" name="data[Rx Power][Good-coverage][from]" value="-75"  width="20px"/>
+              <label for="good">To : </label>			 
+             <input type="text" name="data[Rx Power][Good-coverage][to]" value="-30" width="20px"/>
+           
+        </li>  
+
+        
+        <strong>Average Coverage</strong>
+        <li>
+             <label for="average">From : </label>
+             <input type="text" name="data[Rx Power][Average-coverage][from]" value="-85"  width="20px"/>
+              <label for="average">To : </label>			 
+             <input type="text" name="data[Rx Power][Average-coverage][to]" value="-75" width="20px"/>
+           
+        </li> 
+		<strong>Low Coverage</strong>
+         <li>
+             <label for="low">From : </label>
+             <input type="text" name="data[Rx Power][Low-Coverage][from]" value="-95"  width="20px"/>
+              <label for="low">To : </label>			 
+             <input type="text" name="data[Rx Power][Low-Coverage][to]" value="-85" width="20px"/>
+           
+        </li>  
+		<strong>No Coverage</strong>
+        <li>
+             <label for="no">From : </label>
+             <input type="text" name="data[Rx Power][No-Coverage][from]" value="-120"  width="20px"/>
+              <label for="no">To : </label>			 
+             <input type="text" name="data[Rx Power][No-Coverage][to]" value="-95" width="20px"/>
+           
+        </li>  			
+		
+         </ol>
+      
+	 </div>	
+   
+</div> 
+	  
+	  
+	<div class="div_kpi div_EcIo">
+  
+
+	 <div id="ecio">
+	   <h3 style=" text-align:center"> KPI Best EcIo(W) Scale</h3><hr>  
+	  
+       <ol>
+		<strong>Good</strong>
+	    <li>
+             <label for="good">From : </label>
+             <input type="text" name="data[Best EcIo][Good][from]" value="-7"  width="20px"/>
+              <label for="good">To : </label>			 
+             <input type="text" name="data[Best EcIo][Good][to]" value="0" width="20px"/>
+           
+        </li>  
+         <strong>Fair</strong>
+        <li>
+             <label for="fair">From : </label>
+             <input type="text" name="data[Best EcIo][Fair][from]" value="-14"  width="20px"/>
+              <label for="fair">To : </label>			 
+             <input type="text" name="data[Best EcIo][Fair][to]" value="-7" width="20px"/>
+           
+        </li>  
+          <strong>Poor</strong>
+        <li>
+             <label for="poor">From : </label>
+             <input type="text" name="data[Best EcIo][Poor][from]" value="-20"  width="20px"/>
+              <label for="poor">To : </label>			 
+             <input type="text" name="data[Best EcIo][Poor][to]" value="-14" width="20px"/>
+           
+        </li>  		
+		
+         </ol>
+       </div>	
+   
+</div> 
+
+
+<!-- echelle RxLev--->
+<div class="div_kpi div_RxLev">
+  
+	<div id="Rxlev">
+	   <h3 style=" text-align:center"> KPI RxLev Scale</h3><hr>
+	
+       <ol>
+	   	<strong> Excelent Coverage</strong>
+	    <li>
+             <label for="good">From : </label>
+             <input type="text" name="data[RxLev][VeryGood][from]" value="-65" width="20px"/>
+              <label for="good">To : </label>			 
+             <input type="text" name="data[RxLev][VeryGood][to]" value="-46" width="20px"/>
+        </li> 
+			<strong>Good Coverage</strong>
+	    <li>
+             <label for="good">From : </label>
+             <input type="text" name="data[RxLev][Good][from]" value="-75"  width="20px"/>
+              <label for="good">To : </label>			 
+             <input type="text" name="data[RxLev][Good][to]" value="-65" width="20px"/>
+        </li> 
+			<strong>Average Covereage</strong>		
+        <li>
+             <label for="fair">From : </label>
+             <input type="text" name="data[RxLev][Average][from]" value="-85"  width="20px"/>
+              <label for="fair">To : </label>			 
+             <input type="text" name="data[RxLev][Average][to]" value="-75" width="20px"/>
+        </li> 
+			<strong>Bad Coverage</strong>		
+        <li>
+            <label for="poor">From : </label>
+            <input type="text" name="data[RxLev][bad][from]" value="-95"  width="20px"/>
+            <label for="poor">To : </label>			 
+            <input type="text" name="data[RxLev][bad][to]" value="-85" width="20px"/>       
+        </li>
+			<strong>No Coverage</strong>		
+        <li>
+            <label for="poor">From : </label>
+            <input type="text" name="data[RxLev][verybad][from]" value="-110"  width="20px"/>
+            <label for="poor">To : </label>			 
+            <input type="text" name="data[RxLev][verybad][to]" value="-95" width="20px"/>       
+        </li>
+    </ol>
+	
+  </div>	
+   
+</div>
+
+
+<!-- echelle RxQual--->
+	
+<div class="div_kpi div_RxQaul">
+  
+
+	<div id="Rxqual">
+	   <h3 style=" text-align:center"> KPI RxQual Scale</h3><hr>
+	
+       <ol>
+	   	<strong> Excelent Signal</strong>
+	    <li>
+             <label for="good">From : </label>
+             <input type="text" name="data[RxQual][VeryGood][from]" value="0"  width="20px"/>
+              <label for="good">To : </label>			 
+             <input type="text" name="data[RxQual][VeryGood][to]" value="2" width="20px"/>
+        </li> 
+			<strong>Good Signal</strong>
+	    <li>
+             <label for="good">From : </label>
+             <input type="text" name="data[RxQual][Good][from]" value="2"  width="20px"/>
+              <label for="good">To : </label>			 
+             <input type="text" name="data[RxQual][Good][to]" value="4" width="20px"/>
+        </li> 
+			<strong>Average Signal</strong>		
+        <li>
+             <label for="fair">From : </label>
+             <input type="text" name="data[RxQual][Fair][from]" value="4"  width="20px"/>
+              <label for="fair">To : </label>			 
+             <input type="text" name="data[RxQual][Fair][to]" value="6" width="20px"/>
+        </li> 
+			<strong>Bad Signal</strong>		
+        <li>
+            <label for="poor">From : </label>
+            <input type="text" name="data[RxQual][Poor][from]" value="6"  width="20px"/>
+            <label for="poor">To : </label>			 
+            <input type="text" name="data[RxQual][Poor][to]" value="7" width="20px"/>       
+        </li>
+    </ol>
+	
+  </div>	
+   
+</div>
+

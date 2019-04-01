@@ -1,0 +1,115 @@
+
+
+body{
+	background-color:green;
+}
+
+ul{
+list-style:none;}
+
+h1{
+font-size:1.4em;
+padding-left:18px;
+border:solid 2px blue;
+width:140px;
+background-color:white;
+}
+.modele{
+width:550px;
+margin:50px auto;
+margin-left:270px;
+}
+.modele tr  {
+height:41px;
+line-height:41px;
+margin-right:30px;
+
+
+}
+.modele td 
+{
+
+background-color:#232323;
+cursor:pointer;
+border:solid 1px black;
+-webkit-border-radius:15px 15px 15px 15px ;
+	-moz-border-radius:15px 15px 15px 15px ;
+	-o-border-radius:15px 15px 15px 15px ;
+	border-radius:15px 15px 15px 15px ;
+}
+.modele img {
+padding-left:20px;
+padding-right:20px;
+}
+.modele .aa1{
+font-size:1.4em;
+Color:white;
+padding-left:106px;
+/*padding-right:200px;*/
+width:200px;
+}
+.modele .aa2{
+font-size:1.4em;
+Color:white;
+padding-left:106px;
+/*padding-right:200px;*/
+width:200px;
+}
+.modele .aa3{
+font-size:1.4em;
+Color:white;
+padding-left:20px;
+padding-right:200px;
+width:200px;
+}
+table tr td .aa1:hover {
+color:orange;
+}
+table tr td .aa2:hover {
+color:orange;
+}
+table tr td .aa3:hover {
+color:orange;
+}
+
+.a2 ,.a1{
+padding-left:203px;
+}
+
+
+
+/* style de la partie file et kpi de la partie sql*/
+ol{
+  list-style-type: none;
+  }
+  
+
+#sql {
+	border: 0;
+	margin-bottom: -30px;
+	padding-left:233px;
+}
+
+
+#sql ol li>label
+{
+float:left;
+padding-right: 20px;
+width: 110px;
+text-align: right;
+margin-top:4px;
+
+}
+#sql ol li {
+-moz-border-radius:10px;
+-webkit-border-radius:10px;
+-o-border-radius:10px;
+border-radius:10px;
+border:solid 2px black;
+background-color:#F7F7F7;
+padding:10px;
+margin-bottom:5px;
+width: 360px;
+	
+}
+ 

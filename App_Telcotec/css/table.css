@@ -1,0 +1,89 @@
+/* htable */
+
+.entete p{
+padding-top:20px;
+padding-left:20px;
+font-weight:700;
+}
+#htable{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	background-color:#FFFFFF;
+	margin-bottom:20px;
+}
+
+#htable table{
+	padding:0px;
+	border:3px double #999;
+}
+
+#htable th{
+	height:24px;
+	background-image: url("../images/fond_th.png");
+	background-repeat: repeat-x;
+	text-align:center;
+	padding-top:2px;
+}
+
+#htable td a:link,#htable td  a:visited { color: #444444;}
+#htable td a:active,#htable td  a:hover { color: #215b8d;}
+
+
+#htable td{
+	background-color:#f7f7f7;
+	vertical-align:middle;
+	padding-left:3px;
+	padding-right:3px;
+}
+#htable caption {
+	font-size: 13px;
+	font-weight: bold;
+	color: #ff9c00;
+	text-decoration: none;
+	text-align:left;
+}
+/* end of htable */
+#table1{
+margin-top:30px;
+margin-left:20px;
+margin-right:20px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	background-color:#FFFFFF;
+	margin-bottom:20px;
+}
+
+#table1 table{
+	padding:0px;
+	border:3px double #999;
+}
+
+#table1 th{
+	height:24px;
+	background-image: url("../images/fond_th.png");
+	background-repeat: repeat-x;
+	text-align:center;
+	padding-top:2px;
+}
+
+#table1 td a:link,#table1 td  a:visited { color: #444444;}
+#table1 td a:active,#table1 td  a:hover { color: #215b8d;}
+
+
+#table1 td{
+	background-color:#f7f7f7;
+	vertical-align:middle;
+	padding-left:3px;
+	padding-right:3px;
+}
+#table1 caption {
+	font-size: 13px;
+	font-weight: bold;
+	color: #ff9c00;
+	text-decoration: none;
+	text-align:left;
+}

@@ -1,0 +1,41 @@
+/* htable */
+#htable1{
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+	font-weight: normal;
+	color: #000000;
+	background-color:#FFFFFF;
+	margin-bottom:20px;
+}
+
+#htable1 table{
+	padding:0px;
+	border:3px double #999;
+}
+
+#htable1 th{
+	height:24px;
+	background-image: url("../images/fond_th.png");
+	background-repeat: repeat-x;
+	text-align:center;
+	padding-top:2px;
+}
+
+#htable1 td a:link,#htable1 td  a:visited { color: #444444;} 
+#htable1 td a:active,#htable1 td  a:hover { color: #215b8d;}
+
+
+#htable1 td{
+	background-color:#f7f7f7;
+	vertical-align:middle;
+	padding-left:3px;
+	padding-right:3px;
+}
+#htable1 caption {
+	font-size: 13px;
+	font-weight: bold;
+	color: #ff9c00;
+	text-decoration: none;
+	text-align:left;	
+}
+/* end of htable */

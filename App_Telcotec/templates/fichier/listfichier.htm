@@ -1,0 +1,27 @@
+
+
+<tr>
+	<?php
+	$p="";
+	$affichage="";
+if(isset($_GET['affichage'])) {
+	$affichage=$_GET['affichage'];
+	
+ }
+if(isset($_GET['p'])) {
+	$p=$_GET['p'];
+	
+ }	
+	?>
+	<td><?php echo $dbf1['nom']; ?></td>
+	<td><?php echo $dbf1['country']; ?></td>
+	<td><?php echo $dbf1['date']; ?></td>
+	<td><?php echo $dbf1['format']; ?></td>
+	<td><?php echo $dbf1['type']; ?></td>
+	
+	<td align="center"><a href="?cmd=fichier&action=add_exist&id=<?php echo $dbf1[0]; ?>&affichage=<?php echo $affichage;?>&p=<?php echo $p;?>"><img src="images/icones_actions/upload.png" alt="Add data to existing file" border="0" title="Add data to existing file"/></a></td>
+	
+	<td align="center"><a href="?cmd=fichier&action=mod&id=<?php echo $dbf1[0]; ?>&affichage=<?php echo $affichage;?>&p=<?php echo $p;?>"><img src="images/icones_actions/edit.png" alt="Edit" border="0" title="Edit"/></a></td>
+    
+	<td align="center"><a href="?cmd=fichier&action=del&id=<?php echo $dbf1[0]; ?>"><img src="images/icones_actions/delete.png" alt="Delete" title="Delete" border="0" /></a></td>
+</tr>

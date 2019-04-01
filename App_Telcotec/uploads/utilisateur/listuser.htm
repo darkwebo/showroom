@@ -1,0 +1,14 @@
+<tr>
+	
+	<td><?php echo $dbf1['nom']; ?></td>
+	<td><?php echo $dbf1['prenom']; ?></td>
+	<td><?php echo $dbf1['email']; ?></td>
+	<td><?php echo $dbf2['name']; ?></td>
+	<td align="center"><a href="?cmd=utilisateur&action=acces&go=<?php echo $dbf1[0]; ?>"><img src="images/vcard.png" title="Rights of access" alt="Droits d'acc&eacute;s" border="0"/></a></td>
+	
+	<td align="center"><a href="?cmd=utilisateur&action=mod&id=<?php echo $dbf1[0]; ?>"><img src="images/icones_actions/edit.png" alt="Modifier" border="0" title="Modifier"/></a></td>
+    
+	<td align="center"><a href="mailto:<?php echo $dbf1['email']; ?>"><img src="images/icones_actions/email.png" title="E-mail" alt="E-mail" border="0"/></a></td>
+   
+	<td align="center"><a href="?cmd=utilisateur&action=del&id=<?php echo $dbf1[0]; ?>"><img src="images/icones_actions/delete.png" alt="Supprimer" title="Supprimer" border="0" /></a></td>
+</tr>

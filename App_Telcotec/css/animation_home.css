@@ -1,0 +1,135 @@
+/*style animation home*/
+#featureAnimation, #featureBox {
+  margin-top:55px;
+  background-color:#000;
+  height: 220px;
+  overflow:hidden;
+  line-height: normal;
+  font-size: 80%;
+
+  border:solid 3px #91e600;
+  
+  -webkit-border-radius:15px 15px 15px 15px ;
+  -moz-border-radius:15px 15px 15px 15px ;
+  -o-border-radius:15px 15px 15px 15px ;
+  border-radius:15px 15px 15px 15px ;
+  -moz-box-shadow:7px 7px 7px gray;
+-webkit-box-shadow:7px 7px 7px gray;
+-o-box-shadow:7px 7px 7px gray;
+box-shadow:7px 7px 7px gray;
+}
+#featureAnimation {
+  position:relative;
+  visibility:hidden;
+}
+#featureBox {
+  position:absolute;
+ 
+}
+#featureAnimation, #featureBox, #whyGSAP, .featureTextGreen, .featureTextWhite {
+  width: 850px;
+  margin-left:38px;
+}
+#whyGSAP, .featureTextGreen, .featureTextWhite {
+  text-align: center;
+}
+#whyGSAP, .featureTextGreen, .featureTextWhite {
+  font-size:50px;
+  position:absolute;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+  top:0;
+}
+.featureTextGreen {
+  color:#91e600;
+  font-weight: bold;
+  margin-left: -2px;
+}
+.featureTextWhite {
+  color:white;
+  font-weight:normal;
+  font-size:37px;
+}
+.star {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  display: none;
+}
+#browserIcons {
+  top:64px;
+  left: 180px;
+  width: 92px;
+  height: 92px;
+  position: absolute;
+  text-align:left;
+}
+#browserIcons img {
+  position:absolute;
+}
+.featureTextMinor {
+ 
+  color:#CCCCCC;
+  font-weight:normal;
+  font-size:20px;
+  position:absolute;
+  font-family: "Lucida Grande", "Lucida Sans Unicode", Helvetica, Arial, Verdana, sans-serif;
+  visibility:hidden;
+}
+
+.featureTextMinor .centre
+{
+   margin-left:-50px;
+}
+
+.dot {
+  position:absolute;
+  background-color: #91e600;
+  margin-left:-10px;
+}
+#ctrl_slider {
+  position:absolute;
+  width: 824px;
+  height:10px;
+  left:18px;
+  top:196px;
+  background: rgba(80,80,80,0.3);
+  border:1px solid rgba(102,102,102,0.5);
+  visibility:hidden;
+}
+/*fin style animation home*/
+
+/*animation paragraphe*/
+ p{
+  font-size:17px;
+  line-height:20px;
+  
+/*font-family: Times New Roman, Sans-Serif;*/
+font-family: Arial, Sans-Serif;
+  
+}
+
+
+/* fin animation paragraphe*/
+
+/* Animation carousel*/
+
+/* Carousel base class */
+
+
+
+.rotating-img
+{
+  border:solid 2px gray;
+  -moz-backface-visibility:hidden;
+  -webkit-backface-visibility:hidden !important;
+  -o-backface-visibility:hidden;
+  -ms-backface-visibility:hidden;
+  position:absolute;
+  margin-left:50px;
+  margin-right:25px;
+  margin-top:0px;
+  margin-top:0px;
+}
+
+
+/* fin animation carousel*/

@@ -1,0 +1,256 @@
+<script src="js/jquery-ui-1.js" language="javascript"></script>
+<script src="js/jquery-ui-2.js" language="javascript"></script>
+<script src="js/date.js" language="javascript"></script>
+<script type="text/javascript">
+$(function() {
+	
+	
+	 
+	 country=new Array(46);
+	 country[0]="Afrique du Sud";
+	 country[1]="Algerie";
+	 country[2]="Angola";
+	 country[3]="Benin";
+	 country[4]="Botswana";
+	 country[5]="Burkina Faso";
+	 country[6]="Burundi";
+	 country[7]="Cameroun";
+	 country[8]="Congo";
+	 country[9]="Cote d Ivoire";
+	 country[10]="Djibouti";
+	 country[11]="Egypte";
+	 country[12]="Erythree";
+	 country[13]="Ethiopie";
+	 country[14]="Gabon";
+	 country[15]="Gambie";
+	 country[16]="Ghana";
+	 country[17]="Guinee";
+	 country[18]="Guinee Bissau";
+	 country[19]="Guinee Equatoriale";
+	 country[20]="Kenya";
+	 country[21]="Lesotho";
+	 country[22]="Liberia";
+	 country[23]="Libye";
+	 country[24]="Malawi";
+	 country[25]="Mali";
+	 country[26]="Maroc";
+	 country[27]="Mauritanie";
+	 country[28]="Mozambique";
+	 country[29]="Namibie";
+	 country[30]="Niger";
+	 country[31]="Nigeria";
+	 country[32]="Ouganda";
+	 country[33]="Republique Democratique du Congo";
+	 country[34]="Rwanda";
+	 country[35]="Senegal";
+	 country[36]="Sierra Leone";
+	 country[37]="Somalie";
+	 country[38]="Soudan";
+	 country[39]="Swaziland";
+	 country[40]="Tanzanie";
+	 country[41]="Tchad";
+	 country[42]="Togo";
+	 country[43]="Tunisie";
+	 country[44]="Zambie";
+	 country[45]="Zimbabwe";
+	 var names=$('select[name="country"]').find('option').val();
+	 console.log(names);
+	  var i=0;
+	  while(country[i]!=names)
+	  {
+	  $('select[name="country"]').append('<option value="'+country[i]+'">'+country[i]+'</option>');
+	  
+	  i++;
+	  }
+	if(i<45)
+	{
+	for(var j=i+1; j<46;j++)
+	{
+	$('select[name="country"]').append('<option value="'+country[j]+'">'+country[j]+'</option>');
+	
+	}
+	}
+	
+	
+	
+	
+});
+
+</script>
+<style>
+ol{
+  list-style-type: none;
+  }
+  #fichier
+{ 
+background-color:red;
+width: 442px;
+
+padding:30px;
+
+-moz-border-radius:10px;
+-webkit-border-radius:10px;
+-o-border-radius:10px;
+border-radius:10px;
+border:solid 2px red;
+-moz-box-shadow:10px 10px 10px green;
+-webkit-box-shadow:10px 10px 10px green;
+-o-box-shadow:10px 10px 10px green;
+box-shadow:10px 20px 10px green;
+                
+
+}
+fieldset {
+	border: 0;
+	margin-bottom: 20px;
+}
+
+fieldset legend {
+margin-left:190px;
+	line-height:40px;
+	font-size:32px;
+	color:black;;
+	font-weight: 900px;
+	margin-bottom: 7px;
+	
+}
+fieldset ol li>label
+{
+float:left;
+padding-right: 20px;
+width: 110px;
+text-align: right;
+margin-top:4px;
+
+}
+fieldset ol li {
+position:relative;
+-moz-border-radius:10px;
+-webkit-border-radius:10px;
+-o-border-radius:10px;
+border-radius:10px;
+border:solid 2px black;
+background-color:#F7F7F7;
+padding:10px;
+margin-bottom:5px;
+width: 400px;
+	
+}
+input[type="text"] 
+{
+width:220px;
+height:20px;
+}
+ 
+input[type="submit"] ,input[type="button"]{
+color:black;
+
+width:100px;
+background-color:rgba(255,255,255,0.7)
+
+	
+
+margin-left: 200px;
+
+font-size: 16px;
+font-family:"Time New Roman", Times,serif; 
+}
+ #bt
+{
+
+padding-left:160px;
+}
+.boutton1
+{
+cursor:default;
+margin-top:20px;
+margin-left:-20px;
+margin-bottom:-10px;
+background:url(images/edit-file1.png) no-repeat;
+background-position:3px 0px;
+width:110px;
+height:30px;
+padding-left:35px;
+font-size:1.1em;
+border:solid 2px black;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+-o-border-radius:5px;
+border-radius:5px;
+text-center:right;
+}
+.boutton2
+{
+cursor:default;
+margin-top:20px;
+margin-left:10px;
+margin-bottom:-10px;
+background:url(images/annuler1.png) no-repeat;
+background-position:3px 0px;
+width:110px;
+height:30px;
+padding-left:40px;
+font-size:1.1em;
+border:solid 2px black;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+-o-border-radius:5px;
+border-radius:5px;
+text-center:right;
+}
+</style>
+<div id="msg_erreur"></div>
+	
+<form name="fichier" method="POST" action="?cmd=fichier&action=savemod&id=<?php echo $id;?>&affichage=<?php echo $affichage;?>&p=<?php echo $p;?>" onsubmit="return verif_file(this);" enctype="multiple/form-data">
+	  <fieldset>
+     <legend>Edit File</legend>
+	 
+       <ol>
+	   <input type="hidden" name="nom1" id="nom" value="<?php echo utf8_encode($dbf['nom']);?>"  />
+          <li>
+             <label for="nom">File Name :</label>
+             <input type="text" name="nom" id="nom" value="<?php echo utf8_encode($dbf['nom']);?>"  /> <div id="msg1"></div>
+         
+          </li>
+		  <li>
+             <label for="bullet">List of countries :</label>
+            
+			 <select name="country" style="width:224px">
+			
+				
+			  <?php echo $country; ?>
+            </select> 
+			
+         
+          </li>
+		  <li>
+             <label for="date">Insertion Date :</label>
+             <input type="text" name="date" id="datepicker" value="<?php echo utf8_encode($dbf['date']);?>"  /><div id="msg2"></div>
+         
+          </li>
+		  
+		  
+		 
+          
+         </ol>
+      </fieldset> 
+	<div id="bt">
+	<?php
+	$p="";
+	$affichage="";
+if(isset($_GET['affichage'])) {
+	$affichage=$_GET['affichage'];
+	
+ }
+if(isset($_GET['p'])) {
+	$p=$_GET['p'];
+	
+ }	
+	?>
+<input name="button2" type="submit" class="boutton1" id="button2" value="Validate" />&nbsp;<input name="button2" type="button" class="boutton2" id="button2" value="Cancel" style="width:100px" onclick="window.parent.location.href='?cmd=fichier&action=list&affichage=<?php echo $affichage;?>&p=<?php echo $p;?>'" /></div>
+	  </form>
+	  <script src="js/TweenMax.js"></script>
+<script src="js/TweenLite.js"></script>
+<script src="js/TimelineMax.js"></script>
+<script src="js/TimelineLite.js"></script>
+<script src="js/file.js"></script>

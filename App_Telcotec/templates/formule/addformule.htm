@@ -1,0 +1,283 @@
+<script src="js/formule.js" type="text/javascript"></script>
+<SCRIPT LANGUAGE="JavaScript">
+
+$(function() {
+	$('select[name="file"]').change(function() {
+		window.location.href = '?cmd=formule&action=add&file='+$(this).val();
+	});	
+});
+
+
+//D'autres scripts sur http://www.toutjavascript.com
+//Si vous utilisez ce script, merci de m'avertir !  < webmaster@toutjavascript.com >
+	function Deplacer(l1) {
+		if (l1.options.selectedIndex>=0) {
+			/*o=new Option(l1.options[l1.options.selectedIndex].text,l1.options[l1.options.selectedIndex].value);*/
+			o1=l1.options[l1.options.selectedIndex].text;
+			o=l1.options[l1.options.selectedIndex].value;
+			/*console.log(o1);*/
+			document.getElementById ('toto').value += o;
+			
+		  /*l2.options[l2.options.length]=o;*/
+			/*l1.options[l1.options.selectedIndex]=null;*/
+		}else{
+			alert("No activity selected");
+		}
+	}
+	
+	
+//
+
+
+	
+</SCRIPT>
+
+
+<style>
+ol{
+  list-style-type: none;
+  }
+  #role1
+{ 
+
+width: 442px;
+
+padding:30px;
+
+
+                
+
+}
+fieldset {
+	border: 0;
+	margin-bottom: 20px;
+}
+
+fieldset legend {
+margin-left:140px;
+	line-height:40px;
+	font-size:32px;
+	color:black;;
+	font-weight: 900px;
+	margin-bottom: 7px;
+	
+}
+fieldset ol li>label
+{
+float:left;
+padding-right: 10px;
+width: 110px;
+text-align: right;
+margin-top:4px;
+
+}
+fieldset ol li {
+position:relative;
+border:solid 1px gray;
+background-color:#F7F7F7;
+padding:10px;
+margin-bottom:5px;
+width: 400px;
+	
+}
+
+
+input[type="text"] 
+{
+width:190px;
+height:20px;
+}
+ 
+input[type="submit"] ,input[type="button"]{
+color:black;
+
+width:100px;
+background-color:rgba(255,255,255,0.7)
+
+	
+
+margin-left: 200px;
+
+font-size: 16px;
+font-family:"Time New Roman", Times,serif; 
+}
+ #bt
+{
+
+margin-top:-10px;
+padding-left:160px;
+margin-bottom:15px;
+}
+#ra input[type="radio"] {
+
+margin-left:125px;
+}
+
+#kpi{
+height:170px;
+width:365px;
+
+
+position:absolute;
+
+top:210px;
+left:500px;
+display:none;
+
+
+}
+
+#general
+{
+position:relative;
+}
+#opearande input[type="button"]
+{
+margin-bottom:8px;
+width:32px;
+}
+#number
+{
+display:none;
+padding-left:5px;
+position:absolute;
+top:170px;
+left:500px;
+height:30px;
+width:365px;
+background-color:#F7F7F7;
+border:solid 1px black;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+-o-border-radius:5px;
+border-radius:5px;
+}
+#number input[type="button"]
+{
+margin-left:3px;
+width:37px;
+}
+.boutton1
+{
+cursor:default;
+margin-top:20px;
+margin-left:-20px;
+margin-bottom:-10px;
+background:url(images/calculator.png) no-repeat;
+background-position:3px 0px;
+width:110px;
+height:30px;
+padding-left:35px;
+font-size:1.1em;
+border:solid 2px black;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+-o-border-radius:5px;
+border-radius:5px;
+text-center:right;
+}
+.boutton2
+{
+cursor:default;
+margin-top:20px;
+margin-left:10px;
+margin-bottom:-10px;
+background:url(images/annuler1.png) no-repeat;
+background-position:3px 0px;
+width:110px;
+height:30px;
+padding-left:40px;
+font-size:1.1em;
+border:solid 2px black;
+-moz-border-radius:5px;
+-webkit-border-radius:5px;
+-o-border-radius:5px;
+border-radius:5px;
+text-center:right;
+}
+
+</style>
+<div id="general">
+
+<form name="formule" method="POST" action="?cmd=formule&action=save" onsubmit="return verif_formule(this);">
+
+	   <fieldset>
+	  <legend>Add Formula</legend>
+       <ol>
+          </li>
+		  	<li>
+             <label for="file">File Name :</label>
+             <select name="file" style="width:190px"  >
+            <?php echo $file; ?>
+            </select>
+         
+          </li>	         
+		 
+         
+         <li>
+             <label for="name">Formula Name :</label>
+             <input type="text" name="name" id="name" class="textfield" placeholder="Formula Name" /><div id="msg1"></div>
+         
+          </li>
+		  <div id="par">
+		  <li>
+             <label for="name">Formula  :</label>
+             <textarea rows="10" cols="46" name="formule" id="toto" >Enter your Formula here...</textarea><div id="msg2"></div>
+         
+          </li>
+		  		<li>
+             <label for="operator">Operator :</label>
+             <input type="radio" name="operator" value="Huawei"  /> Huawei<br>
+             <input type="radio" name="operator" value="Alcatel"/> Alcate<br>
+			 <div id="ra">
+			 <input type="radio" name="operator" value="Ericsson"/> Ericsson<br>
+			 <input type="radio" name="operator" value="Nokia Siemens Network"/> Nokia Siemens Network
+			
+             </div>
+			
+				</li>
+				 <div id="msg3"></div>
+		 </div>
+		  
+		  
+         </ol>
+      </fieldset>
+  <div id="kpi">
+  <!--<SELECT align=top name="liste1" size=10  style="width:370px">
+		<OPTION value="IU Paging Success Ratio (%)">IU Paging Success Ratio (%)</OPTION>
+		<OPTION value="RRC Setup Successful Rate (%)">RRC Setup Successful Rate (%)</OPTION>
+		<OPTION value="SHOASUSuccess (%)">SHOASUSuccess (%)</OPTION>
+		<OPTION value="PS Inter_RATHO SR (%)">PS Inter_RATHO SR (%)</OPTION>
+		<OPTION value="Total number of PDCH preemption attempts (times)">Total number of PDCH preemption attempts (times)</OPTION>
+		<OPTION value="Total number of PDCH allocation failures (times)">Total number of PDCH allocation failures (times)</OPTION>
+		<OPTION value="Total Bytes of Uplink GPRS Users LLC PDUs (byte)">Total Bytes of Uplink GPRS Users LLC PDUs (byte)</OPTION>
+		<OPTION value="LLC Throughput of Uplink GPRS Users (kbps)">LLC Throughput of Uplink GPRS Users (kbps)</OPTION>
+		<OPTION value="CS Call Drop Ratio (%)">CS Call Drop Ratio (%)</OPTION>
+		<OPTION value="VOIP Call Drop Rate (%)">VOIP Call Drop Rate (%)</OPTION>
+		<OPTION value="PS Call Drop Ratio (%)">PS Call Drop Ratio (%)</OPTION>
+		<OPTION value="VOIP ERAB Setup Success Rate (%)">VOIP ERAB Setup Success Rate (%)</OPTION>
+		<OPTION value="Call Drop Rate(%)">Call Drop Rate(%)</OPTION>
+		
+    </SELECT>-->
+      <select name="liste1" size=10  style="width:370px">
+            <?php echo $list; ?>
+            </select>
+  
+  </div>	
+ <div id="number">
+      <input name="b0" type="button"  id="n0" value="&lt;&lt;&lt; Add " style="width:90px" onClick="Deplacer(this.form.liste1)" />
+      <input name="b1" type="button"  id="b1" value="+" onclick="document.getElementById ('toto').value +='+'"/>
+	  <input name="b2" type="button"  id="b2" value="-"  onclick="document.getElementById ('toto').value +='-'"/>
+	  <input name="b3" type="button"  id="b3" value="*" onclick="document.getElementById ('toto').value +='*'"/>
+	  <input name="b4" type="button"  id="b4" value="/" onclick="document.getElementById ('toto').value +='/'"/>
+	  <input name="b5" type="button"  id="b5" value="[" onclick="document.getElementById ('toto').value +='['"/>
+	  <input name="b6" type="button"  id="b6" value="]" onclick="document.getElementById ('toto').value +=']'"/>
+ 
+ </div> 
+ 
+	<div id="bt">  
+<input name="button2" type="submit" class="boutton1" id="button2" value="Validate" />&nbsp;<input name="button2" type="button" class="boutton2" id="button2" value="Cancel" style="width:100px" onclick="window.parent.location.href='?cmd=formule&action=list'" />      </div>
+	  </form>
+	  </div>
+	  <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.11.2/TweenMax.min.js"></script>
+<script src="js/role.js"></script>

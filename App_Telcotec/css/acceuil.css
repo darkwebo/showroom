@@ -1,0 +1,222 @@
+/*================================================================================
+           ----------feuille de style de la page d'acceuil------------
+ =================================================================================*/
+
+
+
+
+/*-------------------site plan----------------*/
+#siteplan
+{
+margin-top:56px;
+margin-left:65px;
+  width:760px;
+  height:300px;
+   padding-left:20px;
+   padding-right:20px;
+	margin-bottom:50px;
+	border:solid 3px #46394A;
+
+	-webkit-border-radius:15px 15px 15px 15px ;
+	-moz-border-radius:15px 15px 15px 15px ;
+	-o-border-radius:15px 15px 15px 15px ;
+	border-radius:15px 15px 15px 15px ;
+	-moz-box-shadow:7px 7px 7px gray;
+-webkit-box-shadow:7px 7px 7px gray;
+-o-box-shadow:7px 7px 7px gray;
+box-shadow:7px 7px 7px gray;
+}
+em
+{
+ font-family:"times new roman", times, serif;
+ font-size:1.3em;
+}
+
+
+#siteplan  strong{
+
+padding-left:270px;
+height:15px;
+
+}
+
+ul li a
+{
+text-decoration:none;
+color:red;
+
+}
+ul li
+{
+list-style:none;
+}
+
+#siteplan  #droite
+{
+float:right;
+margin-right:70px;
+margin-top:-142px;
+}
+#siteplan  #gauche
+{
+margin-left:60px;
+margin-top:-15px;
+}
+#siteplan td
+{
+padding-left:10px;
+}
+#siteplan td  a
+{
+color:black;
+}
+
+#siteplan table tr td  a :hover
+{
+font-size:1.3em;
+}
+
+
+/* --------------effet notre service-----------*/
+#service
+{
+margin:0 auto;
+  width:760px;
+    margin-top:50px;
+	margin-left:65px;
+	margin-bottom:30px;
+	height:270px;
+	padding-left:20px;
+	padding-right:20px;
+	border:solid 3px #46394A;
+
+	-webkit-border-radius:15px 15px 15px 15px ;
+	-moz-border-radius:15px 15px 15px 15px ;
+	-o-border-radius:15px 15px 15px 15px ;
+	border-radius:15px 15px 15px 15px ;
+	-moz-box-shadow:7px 7px 7px gray;
+-webkit-box-shadow:7px 7px 7px gray;
+-o-box-shadow:7px 7px 7px gray;
+box-shadow:7px 7px 7px gray;
+}
+#service  strong{
+
+padding-left:220px;
+
+
+}
+section strong{
+	color:black;
+	text-shadow:0 0 7px rgba(0,0,0,1);
+	padding-right:15px;
+	-webkit-transition-property: text-shadow padding;
+	-webkit-transition-duration:1s;
+}
+section strong:hover{
+	padding-left:12px;
+	padding-top:0px;
+	text-shadow:7px 7px 7px rgba(40,55,180,0.7);
+}
+#service .s ul li a
+{
+text-decoration: none;
+height:25px;
+	text-align:center;
+	text-decoration:none;
+	font-weight:900;
+	font-size:12px;
+	line-height:25px;
+	color:black;
+	opacity:0.4;
+
+}
+
+/*--effet sur les liens du plan de notre site*/
+
+
+#service .s .ligne
+{
+padding-left:0;
+}
+#service .s ul li{
+line-height: 1.9em;
+	}
+	/* animation sur les lien:sympa?????*/
+#service .s ul li
+{
+opacity:0.3;
+}
+@-webkit-keyframes anim{
+	0%{
+		opacity:0.3;
+		color:black;
+
+	}
+	30%{
+		opacity:0.47;
+		color:orange;
+
+	}
+	50%{
+		opacity:0.7;
+		color:black;
+
+	}
+	70%{
+		opacity:0.89;
+		color:black;
+
+	}
+	100%{
+		opacity:1;
+		color:black;
+	}
+
+}
+
+#service .s ul li:hover{
+	-webkit-animation-name:anim;
+	-webkit-animation-duration:4s;
+	-webkit-animation-iteration-count:20;
+	}
+#service .s .ligne
+{
+padding-left:15px;
+
+}
+#siteplan .break{
+font-weight:900;
+}
+
+
+
+#About .b
+{
+margin-left:30px;
+margin-Top:-10px;
+padding:4px 10px 4px 10px;
+
+width:350px;
+
+}
+section p{
+	line-height:1.9em;
+	text-align:justify;
+}
+#About
+{
+margin-bottom:25px;
+}
+#About h2
+{
+text-align:center;
+}
+ #About p:first-letter{
+	color:#F30;
+	font-size:22px;
+	}
+
+#droite  em  img
+{
+border:solid 1px black;
+}
