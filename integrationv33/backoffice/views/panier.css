@@ -1,0 +1,90 @@
+.bgcolo{
+	background-color: #2fdab8;
+}
+.green{
+	font-style: ;
+	font-family: Brush Script MT, Brush Script Std, cursive;
+	font-size: 25px;
+	color: #000;
+	font-weight: 600;
+	margin: auto;
+}
+.big{
+	font-family: Georgia, serif;
+}
+.frame{
+    margin: auto;
+}
+.notborder{
+    border: none;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    background-color: #fff;
+}
+.not{
+    border: none;
+    font-family: Georgia, serif;
+    background-color: #2fdab8;
+    font-size: 30px;
+}
+.def{
+	font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+    font-weight: 900;
+}
+.dddj{
+	font-size: 20px;
+	font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+	font-weight: 600;
+}
+.commande{
+	color: #000;
+}
+.pure{
+	font-weight: 500;
+}
+.puttttttt{
+	font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+	font-weight: 900;
+	background-color: #2fdab8;
+}
+.hhh{
+	background-color: #000;
+	color: #fff;
+}
+.hhh1{
+	font-size: 10px;
+	background-color: #000;
+	color: #fff;
+}
+.ddj{
+	font-size: 18px;
+	font-family: Georgia, serif;
+	font-weight: 700;
+	color: #000;
+}
+.dj{
+	font-size: 10px;
+	font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+	font-weight: 900;
+	background-color: #2fdab8;
+}
+.bouton6{
+	border-radius:12px 0 12px 0;
+	background: #000;
+	border:none;
+	box-shadow:2px 2px 8px #aaa;
+	box-decoration-break: 4px 4px 16px #aaa;
+	color:#fff;
+	font:bold 12px New Century Schoolbook, TeX Gyre Schola, serif;
+	padding:6px 0 6px 0;
+}
+.bouton17{
+	width:85px;
+	height:85px;
+	background:#fafafa;
+	box-shadow:2px 2px 8px #aaa;
+	font:bold 13px Arial;
+	border-radius:50%;
+	color:#555;
+}
+

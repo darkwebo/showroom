@@ -1,0 +1,30 @@
+<html>
+<head>
+<title> Formulaire d'ajout</title>
+</head>
+<body>
+<form method="post"  action="main.php">
+Nom: <input type ="text" name = "nom"><br>
+Qte : <input type = "text" name = "qte"><br>
+Prix : <input type = "Number" name = "prix"><br>
+image : <input type = "file" name = "img"><br>
+<input type="submit" value="ajouter" name="ajout">
+<input type="submit" value="afficher" name="affich">
+</form>
+<?php
+  if(isset($_POST['ajout']))
+  {
+    if(getimagesize($FILE['img']['tmp_name']==FALSE)
+	{
+	   echo " veillez selectionner une image ";
+	}
+	else
+	{
+	  $image=addslashes($_FILES['image']['tmp_name']);
+	  $name=addslashes($_FILES['image']['tmp_name']);
+	  $image=file_get_contents($image);
+	  $image=base64_encode($image);
+
+?>
+</body>
+</html>

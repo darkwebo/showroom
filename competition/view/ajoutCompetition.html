@@ -1,0 +1,45 @@
+<HTML>
+
+<head>
+</head>
+
+<body>
+    <form method="POST" action="ajoutCompetition.php">
+        <fieldset>
+            <table>
+                <legend>Ajout d'une Compétition</legend>
+                <tr>
+                    <td>Nom de la Compétition</td>
+                    <td><input type="text" name="nom"  onkeyup="lettersOnly(this)" required></td>
+                </tr>
+                <tr>
+                    <td>Nom du complexe sportif</td>
+                    <td><input type="text" name="nom_c_s"  onkeyup="lettersOnly(this)" required></td>
+                </tr>
+                <tr>
+                    <td>Heure</td>
+                    <td><input type="number" name="heure" required></td>
+                </tr>
+                <tr>
+                    <td>date</td>
+                    <td><input type="date" name="date" required></td>
+                </tr>
+                <tr>
+                    <td>cout</td>
+                    <td><input type="number" name="cout" onkeyup="NumbersOnly(this)" required></td>
+                </tr>
+                <tr>
+                    <td>Type</td>
+                    <td><input type="text" name="type" required></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td><input type="submit" name="ajouter" value="ajouter"></td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+    <script src="javaScript.js"></script>
+</body>
+
+</HTMl>

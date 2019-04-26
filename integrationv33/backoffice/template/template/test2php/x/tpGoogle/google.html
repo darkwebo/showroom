@@ -1,0 +1,33 @@
+<html>
+<head>
+<script language="javascript">
+function recherche()
+{
+mot=document.getElementById("rechercher").value;
+
+			xhr = new XMLHttpRequest();     //  Firefox,
+	xhr.open('GET', 'resultgoogle.php?mot='+mot, true); 
+		xhr.onreadystatechange = function()
+		{ 
+	
+		if ((xhr.readyState == 4 ) && (xhr.status == 200) )
+			
+			document.getElementById("resultat").innerHTML = xhr.responseText;
+		
+		};
+		
+		xhr.send();
+}
+</script>
+</head>
+<body>
+<form name="f1">
+<center><img src="logo.png" width="500" height="250" ></center><br>
+<center><input name="rechercher" id="rechercher" type="text" size="60" onkeyup="recherche()"></center><br><br>
+<center><input type="submit" name="Rechercher Google" value="Rechercher Google"></center>
+
+</form>
+<div id="resultat">
+</div>
+</body>
+</html>

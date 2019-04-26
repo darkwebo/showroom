@@ -1,0 +1,69 @@
+.green{
+	font-style: ;
+	font-family: Brush Script MT, Brush Script Std, cursive;
+	font-size: 50px;
+	color: #000;
+	font-weight: 600;
+	margin: auto;
+}
+.big{
+	font-family: Georgia, serif;
+}
+.frame{
+    margin: auto;
+}
+.notborder{
+    border: none;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    background-color: #fff;
+}
+.not{
+    border: none;
+    font-family: Georgia, serif;
+    background-color: #2fdab8;
+    font-size: 30px;
+}
+.def{
+	font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+    font-weight: 900;
+}
+.dddj{
+	font-size: 20px;
+	font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+	font-weight: 600;
+}
+.commande{
+	color: #000;
+}
+.pure{
+	background-color: #2fdab8;
+	font-weight: 500;
+}
+.puttttttt{
+	font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+	font-weight: 900;
+	background-color: #2fdab8;
+}
+.hhh{
+	background-color: #000;
+	color: #fff;
+}
+.hhh1{
+	font-size: 25px;
+	background-color: #000;
+	color: #fff;
+}
+.ddj{
+	font-size: 18px;
+	font-family: Georgia, serif;
+	font-weight: 700;
+	color: #000;
+}
+.dj{
+	font-size: 35px;
+	font-family: New Century Schoolbook, TeX Gyre Schola, serif;
+	font-weight: 900;
+	background-color: #2fdab8;
+}
+

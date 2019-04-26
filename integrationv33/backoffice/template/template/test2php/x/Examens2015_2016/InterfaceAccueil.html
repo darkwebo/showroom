@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Interface d'Inscription</title>
+		<script language="javascript" src="jquery.js"></script>
+		<script language="javascript" src="script1.js"></script>
+		<link type="text/css" rel="stylesheet" href="styleV2.css" />
+	</head>
+<body>
+<h1 class="titre" style="color:red;">Bienvenu(e) à Affariyet.tn</h1>
+
+<form name="Form" id="formA" >
+<table>
+	
+	<tr>
+    <td><label>E-mail : </label></td>
+    <td><input name="mail" type="email" id="email" required  /></td>
+    </tr>
+	<tr>
+	<td><label>Mot de passe : </label></td>
+    <td><input name="pwd" type="password" id="pwd" maxlength="8" required /></td>
+    </tr>
+	<tr>
+    <td></td>
+	<td><input type="button" value="S'authentifier" onclick="auth()"/><input type="reset" value="Annuler" /></td>
+	</tr>
+	<tr><td></td><td><span id="zone"></span></td></tr>
+</table>
+</form><br/>
+
+</body>
+</html>

@@ -1,0 +1,33 @@
+#divR
+{
+	width: 700px;
+    height: auto;
+    background-color: #EEE;
+    box-shadow: 10px 10px 5px #888888;
+	padding-top: 10px;
+	padding-bottom: 20px;
+
+	
+	text-align:center;
+	margin-left: 160px;
+}
+#zone
+{
+	margin-right: 20px;
+}
+#zone table
+{
+	margin-left: 200px;
+}
+#zone h2
+{
+	margin-top: -10px;
+}
+.titre
+{ 
+text-align:center;
+}
+.filtre
+{
+	margin-top: -10px;
+}

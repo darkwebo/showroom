@@ -1,0 +1,61 @@
+.button
+{
+	border: 2px solid;
+    border-radius: 25px;
+	cursor: pointer;
+	border: 2px solid #a1a1a1;
+    padding: 5px 20px; 
+    background: #dddddd;
+
+}
+form
+{
+	width: 400px;
+    height: 250px;
+    background-color: #EEE;
+    box-shadow: 10px 10px 5px #888888;
+	padding-top: 10px;
+
+}
+#formA
+{
+	/*display: none;*/
+	width: 350px;
+	height: 130px;
+	text-align:center;
+	margin-left: 330px;
+}
+#divR
+{
+	width: auto;
+    height: auto;
+    background-color: #EEE;
+    box-shadow: 10px 10px 5px #888888;
+	padding-top: 10px;
+}
+#formR
+{
+	
+	text-align:center;
+	margin-left: 460px;
+}
+#formI
+{
+	display: none;
+	text-align:center;
+	margin-left: 460px;
+	height: 240px;
+}
+.titre
+{ 
+text-align:center;
+}
+.div
+{
+	text-decoration: underline;
+	padding:5px;
+	/*text-align:center;
+	background-color:#e5eecc;
+	border:solid 1px #c3c3c3;*/
+	cursor: pointer;
+}

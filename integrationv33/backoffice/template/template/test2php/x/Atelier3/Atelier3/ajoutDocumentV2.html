@@ -1,0 +1,92 @@
+<html>
+	<head>
+		<title>Ajout d'un document</title>
+		<meta charset="utf-8"/>
+		<script>
+		function ajoutLiv()
+			{
+				
+				var xhr =  new XMLHttpRequest();
+				
+				xhr.open("GET","champsLiv.php",true);
+				xhr.send();
+				xhr.onreadystatechange = result;
+				function result()
+				{
+					document.getElementById("zone").innerHTML= xhr.responseText;
+				}
+			}
+			function ajoutCD()
+			{
+				
+				var xhr =  new XMLHttpRequest();
+				
+				xhr.open("GET","champsCD.php",true);
+				xhr.send();
+				xhr.onreadystatechange = result;
+				function result()
+				{
+					document.getElementById("zone").innerHTML= xhr.responseText;
+				}
+			}
+			function insertLiv()
+			{
+				
+				var ref = document.getElementById("ref").value;
+				var nom = document.getElementById("nom").value;
+				var date = document.getElementById("date").value;
+				var prix = document.getElementById("prix").value;
+				var auteur = document.getElementById("auteur").value;
+				var nb = document.getElementById("nb").value;
+			
+				var xhr =  new XMLHttpRequest();				
+				xhr.open("POST","scriptLiv.php",true);
+				//On assigne un header 
+				xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded"); 
+				xhr.send("ref="+ref+"&nom="+nom+"&date="+date+"&prix="+prix+"&auteur="+auteur+"&nb="+nb);
+				xhr.onreadystatechange = result;
+				function result()
+				{
+					document.getElementById("redirect").innerHTML= xhr.responseText;
+				}
+			}
+			function insertCD()
+			{
+				
+				var ref = document.getElementById("ref").value;
+				var nom = document.getElementById("nom").value;
+				var date = document.getElementById("date").value;
+				var prix = document.getElementById("prix").value;
+				var auteur = document.getElementById("auteur").value;				
+				var duree = document.getElementById("duree").value;
+				var cap = document.getElementById("cap").value;
+				var xhr =  new XMLHttpRequest();				
+				xhr.open("POST","scriptCD.php",true);
+				//On assigne un header 
+				xhr.setRequestHeader("Content-type","application/x-www-form-urlencoded"); 
+				xhr.send("ref="+ref+"&nom="+nom+"&date="+date+"&prix="+prix+"&auteur="+auteur+"&duree="+duree+"&cap="+cap);
+				xhr.onreadystatechange = result;
+				function result()
+				{
+					document.getElementById("redirect").innerHTML= xhr.responseText;
+				}
+			}
+		</script>
+	</head>
+	<body>
+		<div id="redirect">
+		Référence:
+		<input type="text" id="ref" /><br>
+		Nom:<input type="text" id="nom" /><br>
+		Date_creation:
+		<input type="date" id="date" /><br>
+		Prix:<input type="text" id="prix" /><br>
+		Auteur:<input type="text" id="auteur" /><br>
+		Ajouter un:
+		Livre <input type="radio" name="doc" value="livre"  onclick="ajoutLiv()"/>		
+		CD <input type="radio" name="doc" value="cd" onclick="ajoutCD()" />
+		<div id="zone"></div>
+		
+		</div>
+	</body>
+</html>
